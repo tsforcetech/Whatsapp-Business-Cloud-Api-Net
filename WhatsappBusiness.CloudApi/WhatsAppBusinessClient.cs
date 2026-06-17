@@ -4036,8 +4036,8 @@ namespace WhatsappBusiness.CloudApi
 				{
 					name = templateName,
 					language = new { code = languageCode },
-					components = processedComponents.Count > 0 ? processedComponents.ToArray() : null
-				}
+					components = components
+                }
 			};
 
 			if (cloudApiConfig is not null)

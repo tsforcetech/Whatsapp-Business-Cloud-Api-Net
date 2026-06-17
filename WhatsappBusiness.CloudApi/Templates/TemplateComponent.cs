@@ -8,6 +8,14 @@ namespace WhatsappBusiness.CloudApi.Templates
         [JsonPropertyName("type")]
         public string Type { get; set; }  // "HEADER", "BODY", "FOOTER", "BUTTONS"
 
+        [JsonPropertyName("sub_type")]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public string sub_type { get; set; }  // 
+
+        [JsonPropertyName("index")]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public string Index { get; set; }
+
         [JsonPropertyName("text")]
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public string Text { get; set; }  // Used for header, body and footer. Should be null when Type is BUTTONS
