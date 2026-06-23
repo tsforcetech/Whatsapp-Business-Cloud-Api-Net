@@ -122,13 +122,21 @@ namespace WhatsappBusiness.CloudApi.Messages.Requests
 	public class CardImage
 	{
 		[JsonPropertyName("id")]
-		public string Id { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public string Id { get; set; }
+
+		[JsonPropertyName("link")]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public string link { get; set; }
 	}
 
 	public partial class CarouselMessageParameter
 	{
 		[JsonPropertyName("type")]
 		public string Type { get; set; }
+
+		[JsonPropertyName("parameter_name")]
+		public string parameter_name { get; set; }
 
 		[JsonPropertyName("text")]
 		public string Text { get; set; }
