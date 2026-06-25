@@ -110,6 +110,10 @@ namespace WhatsappBusiness.CloudApi.Messages.Requests
 		[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
 		public CardImage Image { get; set; }
 
+		[JsonPropertyName("video")]
+		[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+		public CardImage Video { get; set; }
+
 		[JsonPropertyName("text")]
 		[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
 		public string Text { get; set; }
